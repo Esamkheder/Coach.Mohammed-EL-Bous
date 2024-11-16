@@ -493,9 +493,13 @@ body {
     .plan {
         min-width: 100%;
     }
+    .social-icons
     .footer {
-        flex-direction: column;
+        flex-direction: row;
         text-align: center;
+    }
+    .footter-social-icons a{
+    font-size:2em ;
     }
 }
 
