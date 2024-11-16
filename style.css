@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -24,11 +26,23 @@ html{
 body{
     background: var(--bg-color);
     color: var(--text-colr);
+    margin-left: auto;
 }
 
 section{
     min-height: 100vh;
     padding:10rem 8% 2rem ;
+}
+
+.logo{
+    font-size: 3rem;
+    color: var(--text-colr);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+span{
+    color: var(--main-color);
 }
 header{
     position: fixed;
@@ -47,35 +61,34 @@ header{
     font-size: 3rem;
     font-weight: 500;
 }
-.logo{
-    font-size: 3rem;
+.checkbtn{
+    display: none;
+}
+nav{
+    background: var(--bg-color);
+    height: 80px;
+    width: 100%;
+}
+nav ul{
+    float:right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
     color: var(--text-colr);
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
+    font-size: 17px;
+    text-transform: uppercase;
 }
-.logo:hover{
-    transform: scale(1.1);
-}
-span{
-    color: var(--main-color);
-}
-.navbar{
-    display:flex ;
-}
-.navbar a{
-    font-size: 1.8rem;
-    font-weight: 500;
-    color: var(--text-colr);
-    margin-left: 4rem ;
-    transition: all 0.5s ease;
-    border-bottom: 3px solid transparent;
-}
-.navbar a:hover,
-.navbar a:active{
+a:hover,
+a:active{
     color: var(--main-color);
     border-bottom:3px solid var(--main-color) ;
 }
+
 .nav-btn{
     display: inline-block;
     padding: 1rem 2rem ;
@@ -91,17 +104,18 @@ span{
     transform: scale(1.1);
     color: var(--text-colr);
 }
-.nav-btn1{
-    display: none;
-    padding: 1rem 2rem ;
-    background: transparent;
-    color: var(--main-color);
-    border: 2px solid    var(--main-color) ;
-    border-radius: 1rem;
-    font-size: 1.6rem;
-    font-weight: 600;
-    transition: all 0.5s ease;
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
 }
+#check{
+    display: none;
+}
+
 #menu-icon{
     font-size: 3.6rem;
     color: var(--main-color);
@@ -118,7 +132,7 @@ span{
     background-position: center;
     background-attachment: fixed;
 }
-.social-icons a {
+.social-icons a ,.footter-social-icons a {
     color: #fff;
     font-size: 3em;
     padding-right: 30px;
@@ -408,37 +422,39 @@ body {
         justify-content: flex-start;
         align-items: flex-start;
     }
-
-    .navbar {
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        width: 255px;
-        min-height: 100vh;
-        display:flex;
-        flex-direction: column;
-    }
-    .navbar a {
-        font-size: 1.6rem;
-        margin: 1rem 0;
-        padding: 17px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 1rem; 
+    nav ul li a{
+        font-size: 16px;
 
     }
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top :80px;
+        left: 100%;
+        text-align: center;
+        transition: all 0.5s;
+        background: var(--bg-color);
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height:30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: var(--bg-color);
 
+    }
+    #check:checked ~ ul{
+        left: 0;
 
-    
-    #menu-icon {
-        display: flex;
-        position: absolute; /* تمكين التمركز المطلق */
-        top: 1.5rem; /* مسافة من الأعلى */
-        right: 10%; /* مسافة من اليمين */
-        justify-content: center;
-        align-items: center;
-        
     }
 
     .nav-btn {
@@ -496,7 +512,7 @@ body {
     .social-icons
     .footer {
         flex-direction: row;
-        text-align: center;
+        text-align: left;
     }
     .footter-social-icons a{
     font-size:2em ;
