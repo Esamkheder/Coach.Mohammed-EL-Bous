@@ -426,6 +426,7 @@ body {
     }
     .checkbtn{
         display: flex;
+        margin:0;
     }
     nav ul{
         position: fixed;
