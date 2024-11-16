@@ -39,5 +39,13 @@ new Swiper('.card-wrapper', {
       });
     });
   });
+  const typed = new Typed('.multiple-text', {
+    strings: ['Physical Fitness', 'Bodybilding', 'Fat Loss','Gain weight'],
+    typeSpeed: 60,
+    backSpeed:60,
+    backDelay: 100,
+    loop:true
+
+  });
   
   
