@@ -1,5 +1,4 @@
-
- new Swiper('.card-wrapper', {
+new Swiper('.card-wrapper', {
     // Optional parameters
 
     loop: true,
@@ -24,21 +23,21 @@
       768:{
         slidesPerView: 2
       } ,
-      1042:{
+      900:{
         slidesPerView: 3
       } ,
     }
   
   });
-document.addEventListener("DOMContentLoaded", function () {
-  const navLinks = document.querySelectorAll("nav ul li a");
-  const checkbox = document.getElementById("check");
-
-  navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      checkbox.checked = false; // Uncheck the checkbox to close the menu
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll("nav ul li a");
+    const checkbox = document.getElementById("check");
+  
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        checkbox.checked = false; // Uncheck the checkbox to close the menu
+      });
     });
   });
-});
-
+  
   
