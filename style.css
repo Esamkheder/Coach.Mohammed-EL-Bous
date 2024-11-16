@@ -416,7 +416,7 @@ body {
         font-size: 55%; /* Adjust base font size for smaller screens */
     }
     .logo{
-        font-size: 15px;
+        font-size: 20px;
         justify-content: flex-start;
         align-items: flex-start;
     }
@@ -425,7 +425,7 @@ body {
 
     }
     .checkbtn{
-        display: block;
+        display: flex;
     }
     nav ul{
         position: fixed;
