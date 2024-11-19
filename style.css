@@ -221,6 +221,17 @@ span{
 .cert{
     background-color: #171616;
 }
+.swiper-pagination-bullet{
+    color: var(--main-color);
+    background: var(--main-color);
+    
+}
+.swiper-button-prev{
+    color: var(--main-color);
+}
+.swiper-button-next{
+    color: var(--main-color);;
+}
 .card-list .card-item {
     list-style: none;
 }
