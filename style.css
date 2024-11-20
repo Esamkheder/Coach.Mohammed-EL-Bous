@@ -243,49 +243,57 @@ span{
     place-items: center;
     overflow: hidden;
 }
+
+.slide-track{
+    display: flex;
+    width: calc(250px*18);
+    animation: scroll 40s linear infinite  ;
+}
+@keyframes scroll{
+    0% {
+        transform: translateX(0); /* البداية */
+    }
+    100% {
+        transform: translateX(calc(-100%)); /* نقطة الذروة (إلى اليسار بالكامل) */
+    }
+
+}
+
+.slide-track:hover{
+    animation-play-state: paused;
+}
+
+.slide{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px
+}
+.slide img{
+    width: 100%;
+    transition: 1s;
+}
+.slide img:hover{
+    transform: translateZ(20px);
+}
 .slider::before,
 .slider::after{
+    
     content: '';
     height: 100%;
     position: absolute;
     width: 15%;
     z-index: 2;
 }
-
-.scrolling-element {
-    overflow: hidden; /* إخفاء العناصر خارج الحاوية */
-    width: 100%; /* عرض الحاوية */
-    position: relative;
-    white-space: nowrap; /* لمنع الالتفاف */
-    display: flex;
-    animation: scroll 8s linear infinite alternate ;
+.slider::before{
+    left: 0;
+    top: 0;
 }
-
-/* العنصر المتحرك */
-.scrolling-element .content {
-    display: inline-block; /* لتكون العناصر بجانب بعضها */
-    /* حركة ذهابًا وإيابًا */
-}
-.scrolling-element img {
-    height: 200px;
-    margin-right: 10px; /* مسافة بين الصور */
-    transition: transform 1s;
-}
-.scrolling-element .content img:hover{
-    transform: scale(1.1);
-}
-.scrolling-element:hover{
-    animation-play-state: paused;
-}
-
-/* الحركة */
-@keyframes scroll {
-    0% {
-        transform: translateX(0); /* البداية */
-    }
-    100% {
-        transform: translateX(-100%); /* التحرك بالكامل إلى اليسار */
-    }
+.slider::after{
+    right: 0;
+    top: 0;
 }
 .card-list .card-item {
     list-style: none;
