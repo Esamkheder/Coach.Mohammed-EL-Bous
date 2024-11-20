@@ -124,7 +124,7 @@ a:active{
     display: flex;
     justify-content: center;
     align-items: center;
-     background: url(https://raw.githubusercontent.com/Esamkheder/Coach.Mohammed-EL-Bous/refs/heads/main/images/panoramic-view-abstract-fog-white-600nw-2043241487.webp)no-repeat;
+    background: url(https://raw.githubusercontent.com/Esamkheder/Coach.Mohammed-EL-Bous/refs/heads/main/images/panoramic-view-abstract-fog-white-600nw-2043241487.webp)no-repeat;
     background-size:cover;;
     background-position: center;
     background-attachment: fixed;
@@ -232,36 +232,6 @@ span{
 .swiper-button-next{
     color: var(--main-color);;
 }
-.Review{
-    background-color: #333;
-}
-.slider-container{
-    margin-top: 20px;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    flex-wrap: nowrap;
-}
-.image-slider {
-    display: flex;
-    list-style: none;
-    gap: 45px;
-    animation: infiniteslider 10s infinite linear;
-  }
-  
-  @keyframes infiniteslider {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%); /* يحرك نصف العرض */
-    }
-  }
-  
-  .image-slider img {
-    width: 200px; /* عرض الصورة */
-    height: auto;
-  }
 .card-list .card-item {
     list-style: none;
 }
@@ -354,7 +324,7 @@ span{
     padding: 10px 20px;
     background-color: var(--main-color);
     border: none;
-    color: #000;
+    color: var(--text-colr);
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -362,9 +332,41 @@ span{
 .plan .buy-button:hover {
     background-color: #ff9800;
 }
+
 .payments{
     background-color:#171616;
 }
+.Review{
+    background-color: #333;
+}
+.slider-container{
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+.image-slider {
+    display: flex;
+    list-style: none;
+    gap: 45px;
+    animation: infiniteslider 10s infinite linear;
+  }
+  
+  @keyframes infiniteslider {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%); /* يحرك نصف العرض */
+    }
+  }
+  
+  .image-slider img {
+    width: 200px; /* عرض الصورة */
+    height: auto;
+  }
+
 .payments-cards{
     display: flex;
     justify-content: center;
@@ -424,8 +426,6 @@ span{
     justify-content: right;
 }
 
-/* General CSS styling remains the same */
-
 /* Responsive adjustments */
 @media (max-width: 991px) {
     html {
@@ -442,7 +442,7 @@ span{
     }
     .checkbtn{
         display: flex;
-        margin:0;
+        margin: 0;
     }
     nav ul{
         position: fixed;
@@ -496,6 +496,10 @@ span{
         width: 80%;
         height: auto;
     }
+    .about{
+        display: flex;
+       justify-content: center;
+    }
     .about-content {
         padding: 0;
         margin: 2rem 0;
@@ -532,7 +536,7 @@ span{
     .plan {
         min-width: 100%;
     }
-        .Review h1{
+    .Review h1{
         font-size: 30px;
     }
     .image-slider {
@@ -540,14 +544,11 @@ span{
         animation: infiniteslider 15s infinite linear; /* اجعل الحركة أبطأ */
       }
     
-    .image-slider img {
+      .image-slider img {
         width: 100px; /* تصغير الصور للموبايل */
       }
-    .image-slider {
-        animation: infiniteslider 20s infinite linear; /* حركة أبطأ */
-      }
     .footter-social-icons a{
-    font-size:1.5em ;
+    font-size:2em ;
     }
 }
 
