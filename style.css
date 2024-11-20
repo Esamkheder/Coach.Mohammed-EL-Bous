@@ -543,14 +543,14 @@ span{
         gap: 10px; /* قلل المسافة بين الصور */
         display: flex;
         list-style: none;
-        animation: infiniteslider 5s infinite linear alternate  ;
+        animation: infiniteslider 10s infinite linear alternate  ;
     }
     @keyframes infiniteslider {
         from {
           transform: translateX(0);
         }
         to {
-          transform: translateX(-300%); /* يحرك نصف العرض */
+          transform: translateX(-350%); /* يحرك نصف العرض */
         }
       }
     .image-slider img {
