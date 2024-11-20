@@ -550,7 +550,7 @@ span{
           transform: translateX(0);
         }
         to {
-          transform: translateX(-250%); /* يحرك نصف العرض */
+          transform: translateX(-300%); /* يحرك نصف العرض */
         }
       }
     .image-slider img {
