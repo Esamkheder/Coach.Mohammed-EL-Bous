@@ -213,9 +213,10 @@ span{
 .about-content p {
     text-align: left;
 }
-.about a{
-
-    float: right;
+.about-content a {
+    display: grid;
+    place-items: center;
+    margin-top: 20px;
 }
 
 .cert{
