@@ -350,7 +350,7 @@ span{
     display: flex;
     list-style: none;
     gap: 45px;
-    animation: infiniteslider 10s infinite linear;
+    animation: infiniteslider 10s infinite linear alternate ;
   }
   
   @keyframes infiniteslider {
@@ -358,12 +358,12 @@ span{
       transform: translateX(0);
     }
     to {
-      transform: translateX(-50%); /* يحرك نصف العرض */
+      transform: translateX(-100%); /* يحرك نصف العرض */
     }
   }
   
   .image-slider img {
-    width: 200px; /* عرض الصورة */
+    width: 300px; /* عرض الصورة */
     height: auto;
   }
 
@@ -541,12 +541,21 @@ span{
     }
     .image-slider {
         gap: 10px; /* قلل المسافة بين الصور */
-        animation: infiniteslider 15s infinite linear; /* اجعل الحركة أبطأ */
+        display: flex;
+        list-style: none;
+        animation: infiniteslider 5s infinite linear alternate  ;
+    }
+    @keyframes infiniteslider {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-250%); /* يحرك نصف العرض */
+        }
       }
-    
-      .image-slider img {
-        width: 100px; /* تصغير الصور للموبايل */
-      }
+    .image-slider img {
+        width: 250px; /* تصغير الصور للموبايل */
+    }
     .footter-social-icons a{
     font-size:2em ;
     }
