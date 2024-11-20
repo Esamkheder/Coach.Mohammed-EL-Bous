@@ -535,11 +535,17 @@ span{
         .Review h1{
         font-size: 30px;
     }
-    .social-icons
-    .footer {
-        flex-direction: row;
-        text-align: left;
-    }
+    .image-slider {
+        gap: 10px; /* قلل المسافة بين الصور */
+        animation: infiniteslider 15s infinite linear; /* اجعل الحركة أبطأ */
+      }
+    
+    .image-slider img {
+        width: 100px; /* تصغير الصور للموبايل */
+      }
+    .image-slider {
+        animation: infiniteslider 20s infinite linear; /* حركة أبطأ */
+      }
     .footter-social-icons a{
     font-size:1.5em ;
     }
