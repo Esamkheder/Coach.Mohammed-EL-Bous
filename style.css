@@ -232,6 +232,61 @@ span{
 .swiper-button-next{
     color: var(--main-color);;
 }
+.Review{
+    background-color: #333;
+}
+.slider{
+    height: 250px;
+    margin: auto;
+    position: relative;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+.slider::before,
+.slider::after{
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+
+.scrolling-element {
+    overflow: hidden; /* إخفاء العناصر خارج الحاوية */
+    width: 100%; /* عرض الحاوية */
+    position: relative;
+    white-space: nowrap; /* لمنع الالتفاف */
+    display: flex;
+    animation: scroll 8s linear infinite alternate ;
+}
+
+/* العنصر المتحرك */
+.scrolling-element .content {
+    display: inline-block; /* لتكون العناصر بجانب بعضها */
+    /* حركة ذهابًا وإيابًا */
+}
+.scrolling-element img {
+    height: 200px;
+    margin-right: 10px; /* مسافة بين الصور */
+    transition: transform 1s;
+}
+.scrolling-element .content img:hover{
+    transform: scale(1.1);
+}
+.scrolling-element:hover{
+    animation-play-state: paused;
+}
+
+/* الحركة */
+@keyframes scroll {
+    0% {
+        transform: translateX(0); /* البداية */
+    }
+    100% {
+        transform: translateX(-100%); /* التحرك بالكامل إلى اليسار */
+    }
+}
 .card-list .card-item {
     list-style: none;
 }
@@ -395,31 +450,6 @@ span{
 }
 
 /* General CSS styling remains the same */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: -apple-system, sans-serif;
-}
-:root {
-    --bg-color: #000;
-    --snd-bg-color: #111;
-    --text-colr: #fff;
-    --main-color: #ef5f12;
-}
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
-body {
-    background: var(--bg-color);
-    color: var(--text-colr);
-}
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
@@ -527,13 +557,16 @@ body {
     .plan {
         min-width: 100%;
     }
+        .Review h1{
+        font-size: 30px;
+    }
     .social-icons
     .footer {
         flex-direction: row;
         text-align: left;
     }
     .footter-social-icons a{
-    font-size:2em ;
+    font-size:1.5em ;
     }
 }
 
