@@ -30,7 +30,6 @@ body{
 }
 
 section{
-    min-height: 100vh;
     padding:10rem 8% 2rem ;
 }
 
@@ -236,66 +235,33 @@ span{
 .Review{
     background-color: #333;
 }
-.slider{
-    height: 250px;
-    margin: auto;
-    position: relative;
-    display: grid;
-    place-items: center;
+.slider-container{
+    margin-top: 20px;
     overflow: hidden;
-}
-
-.slide-track{
-    display: flex;
-    width: calc(250px*18);
-    animation: scroll 40s linear infinite  ;
-}
-@keyframes scroll{
-    0% {
-        transform: translateX(0); /* البداية */
-    }
-    100% {
-        transform: translateX(calc(-100%)); /* نقطة الذروة (إلى اليسار بالكامل) */
-    }
-
-}
-
-.slide-track:hover{
-    animation-play-state: paused;
-}
-
-.slide{
-    height: 200px;
-    width: 250px;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    perspective: 100px
-}
-.slide img{
+    position: relative;
     width: 100%;
-    transition: 1s;
+    flex-wrap: nowrap;
 }
-.slide img:hover{
-    transform: translateZ(20px);
-}
-.slider::before,
-.slider::after{
-    
-    content: '';
-    height: 100%;
-    position: absolute;
-    width: 15%;
-    z-index: 2;
-}
-.slider::before{
-    left: 0;
-    top: 0;
-}
-.slider::after{
-    right: 0;
-    top: 0;
-}
+.image-slider {
+    display: flex;
+    list-style: none;
+    gap: 45px;
+    animation: infiniteslider 10s infinite linear;
+  }
+  
+  @keyframes infiniteslider {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%); /* يحرك نصف العرض */
+    }
+  }
+  
+  .image-slider img {
+    width: 200px; /* عرض الصورة */
+    height: auto;
+  }
 .card-list .card-item {
     list-style: none;
 }
