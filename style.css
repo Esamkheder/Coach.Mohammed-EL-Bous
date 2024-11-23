@@ -441,13 +441,10 @@ span{
     display: flex;
     justify-content: space-between;
 }
-.footer .social-icons{
-    color: #fff;
-    font-size: 10px;
-    padding-right: 30px;
-    transition: 0.7s ease;
-    justify-content: right;
-}
+.footer-logo{
+    font-size:2rem ;
+    color: var(--text-colr);
+    }
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
@@ -583,8 +580,9 @@ span{
     .image-slider img {
         width: 250px; /* تصغير الصور للموبايل */
     }
-    .footter-social-icons a{
-    font-size:2em ;
+    .footer-logo{
+    font-size:1.6rem ;
+    color: var(--text-colr);
     }
 }
 
