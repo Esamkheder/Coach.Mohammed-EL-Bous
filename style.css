@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
@@ -124,7 +125,7 @@ a:active{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(https://raw.githubusercontent.com/Esamkheder/Coach.Mohammed-EL-Bous/refs/heads/main/images/panoramic-view-abstract-fog-white-600nw-2043241487.webp)no-repeat;
+    background: url(https://raw.githubusercontent.com/CoachMohammedElbous/CoachMohammedElbous/refs/heads/main/images/panoramic-view-abstract-fog-white-600nw-2043241487.webp)no-repeat;
     background-size:cover;;
     background-position: center;
     background-attachment: fixed;
@@ -163,8 +164,9 @@ span{
     line-height: 1.3;
 }
 .home-img img{
-    width: 30vw;
+    width: 40vw;
     height: 45vw;
+    border-radius: 10px 40px;
 }
 
 .btn{
@@ -198,29 +200,30 @@ span{
     margin-bottom: 30px;
 
  }
-.about-content{
+.about{
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-}
-.about-content h2 ,.about-content p {
+ }
+
+.about-content h2  {
     font-size: 3rem;
     font-weight: 600;
     float: right;
 }
 .about-content p {
+    font-size: 3rem;
+    font-weight: 600;
     text-align: left;
 }
 .about-content a {
-    display: grid;
-    place-items: center;
+    margin-left: 55rem;
     margin-top: 20px;
 }
 
 .cert{
     background-color: #171616;
 }
+
 .swiper-pagination-bullet{
     color: var(--main-color);
     background: var(--main-color);
@@ -236,10 +239,10 @@ span{
     list-style: none;
 }
 .card-list .card-item .card-link{
-    width: 400px;
+    width: 90%;
     display: block;
     background: var(--bg-color);
-    padding: 18px;
+    padding: 10px;
     border-radius: 12px;
     border: 2px solid transparent;
     text-decoration: none;
@@ -250,9 +253,12 @@ span{
 }
 
 .card-list .card-link .card-image{
-    width: 100%;
+    
     object-fit: cover;
     border-radius: 10px;
+}
+.card-list .card-item .card-link img{
+    width: 100%;
 }
 
 .tab-container {
@@ -271,7 +277,8 @@ span{
     flex: 1;
     padding: 10px;
     text-align: center;
-    background-color: #333;
+    background-color: var(--main-color);
+    color:var(--text-colr);
     border: 1px solid #444;
     min-width: 90px;
     font-size: 3rem;
@@ -279,7 +286,7 @@ span{
     margin: 10px;
 }
 .tab:hover {
-    background-color: #555;
+    background-color:darkorange;
 }
 .tab-content {
     display: none;
@@ -330,6 +337,13 @@ span{
     text-decoration: line-through;
     color: var(--text-colr);
 }
+
+.plan p span{
+    text-decoration: line-through;
+    color: var(--text-colr);
+    font-weight: 200;
+}
+
 .plan i.fa-check{
     color: #3aff04;
     margin-right: 5px;
@@ -337,6 +351,16 @@ span{
 .plan i.fa-xmark{
     color: #ff0404;
     margin-right: 5px;
+}
+.offer{
+    font-size: 2rem;
+    text-decoration: underline;
+    color: var(--main-color);
+}
+.time{
+    color: var(--main-color);
+    font-size: 1.7rem;
+    font-weight: 600;
 }
 .plan .buy-button {
     margin-top: 15px;
@@ -381,8 +405,12 @@ span{
     }
   }
   .image-slider:hover {
-    
     animation-play-state: paused;
+  }
+  .image-slider:hover > :not(:hover) {
+    opacity: 0.3;
+    
+    
   }
   .image-slider img {
     width: 300px; /* عرض الصورة */
@@ -444,8 +472,69 @@ span{
 .footer-logo{
     font-size:2rem ;
     color: var(--text-colr);
-    }
+ }
+ .container {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    
+    margin: 0 auto;
+    box-shadow: 0 0 10px var(--main-color);
+}
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px; 
+    padding: 10px;
+}
+.buttons .tabs{
+    background-color: var(--main-color);
+    color:var(--text-colr);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
+    justify-content: center;
+}
+.buttons .tabs:hover{
+    background-color: darkorange;
+}
+.food_content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
 
+.food_content.active {
+    display: block;
+    opacity: 1;
+}
+select, input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: 1px solid #666;
+    color:#000;
+}
+option{
+    color: #000;
+}
+label{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-colr);
+}
+.Calories_Calculator{
+    background-color: #333;
+}
+.Calories_Calculator .container{
+    background-color: #000;
+    box-shadow: 0 0 10px var(--main-color);
+} 
 /* Responsive adjustments */
 @media (max-width: 991px) {
     html {
@@ -468,7 +557,7 @@ span{
         position: fixed;
         width: 100%;
         height: 100vh;
-        top :40px;
+        top :80px;
         left: 100%;
         text-align: center;
         transition: all 0.5s;
@@ -505,8 +594,10 @@ span{
     }
     .home-img img {
         flex-direction: column;
-        width: 40vw;
+        margin-top: 10px;
+        width: 60vw;
         height: auto;
+        border-radius: 10px 40px;
     }
     .about {
         flex-direction: column;
@@ -531,6 +622,10 @@ span{
     .about-content p {
         font-size: 2rem;
     }
+    .about-content a {
+        margin-left: 0;
+        margin-top: 20px;
+    }
     .tabs {
         flex-wrap: nowrap;
         margin-right: 100px;
@@ -541,13 +636,19 @@ span{
         flex: 0 1 auto; /* Ensure tabs take up the full width on mobile */
         margin-bottom: 5px;
     }
+    .swiper{
+       width: auto;
+    }
     .card-list .card-item .card-link{
-        width: 350px;
-        padding: 20px;
+        padding: 10px;
         justify-content: center;
+        
+    }
+    .card-list .card-item .card-link img{
+        width: 100%;
     }
     .card-list .card-link .card-image {
-        width: 95%;
+        width: 80%;
     }
     .plans {
         flex-direction: column;
@@ -564,7 +665,7 @@ span{
         font-size: 30px;
     }
     .image-slider {
-        gap: 10px; /* قلل المسافة بين الصور */
+        gap: 10px; 
         display: flex;
         list-style: none;
         animation: infiniteslider 10s infinite linear alternate  ;
@@ -578,11 +679,27 @@ span{
         }
       }
     .image-slider img {
-        width: 250px; /* تصغير الصور للموبايل */
+        width: 250px; 
+    }
+    .slider-container h1{
+        margin-top: 10px;
+        font-size: 20px;
     }
     .footer-logo{
     font-size:1.6rem ;
     color: var(--text-colr);
     }
+    
+    .buttons{
+        grid-template-columns: 35% 35% 35%;
+        gap: 0;
+        padding: 0;
+    }
+    .buttons .tabs{
+        padding: 10px 40px;
+        font-size: 14px;
+        font-weight: 300;
+        align-items: center;
+        text-align: center;
+    }
 }
-
